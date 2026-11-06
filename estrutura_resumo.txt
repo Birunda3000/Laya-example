@@ -1,0 +1,52 @@
+{
+    "schema_version": "str",
+    "language": "str",
+    "total_datasets": "int",
+    "total_columns": "int",
+    "total_sensitive_columns": "int",
+    "total_non_sensitive_columns": "int",
+    "datasets": [
+        {
+            "dataset_id": "str",
+            "dataset_name": "str",
+            "domain": "str",
+            "purpose": "str",
+            "num_rows": "int",
+            "num_cols": "int",
+            "columns": [
+                {
+                    "name": "str",
+                    "description": "str",
+                    "data_type": "str",
+                    "semantic_type": "str",
+                    "null_percentage": "float",
+                    "cardinality": "int",
+                    "uniqueness_ratio": "float",
+                    "quantiles": {
+                        "min": "float",
+                        "p25": "float",
+                        "p50": "float",
+                        "p75": "float",
+                        "max": "float",
+                        "mean": "float",
+                        "std": "float"
+                    },
+                    "detectors": {
+                        "cpf": "bool",
+                        "cnpj": "bool",
+                        "cep": "bool",
+                        "email": "bool",
+                        "phone": "bool",
+                        "ssn": "bool",
+                        "zipcode": "bool",
+                        "date": "bool",
+                        "person_name": "bool",
+                        "location": "bool"
+                    },
+                    "should_anonymize": "bool",
+                    "reason": "str"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+  "alpha": 0.1,
+  "band": {
+    "default": null,
+    "questions": {
+      "should_anonymize": {
+        "confidence": 0.95,
+        "examples": 157,
+        "reachable": false,
+        "source": "fitted",
+        "target_precision": 0.95,
+        "threshold": 0.999845
+      }
+    },
+    "report": {
+      "note": "thresholds chosen on these examples; held_out in the report is the same rule scored on rows it did not choose on",
+      "targeted": {
+        "confidence": 0.95,
+        "max_review_rate": 1.0,
+        "target_precision": 0.95
+      }
+    }
+  },
+  "checksum": "8fcc20724eefbf4391ad626d028951333250771cf79858a182531eba35fc83c4",
+  "provenance": {
+    "engine_sha256": "78f96be7c6a06abb873e573fcf9e43ef467010a30c72cd6cac32538cd7078db8",
+    "fitted_at": "2026-11-06T13:36:19+00:00",
+    "max_len": 73728,
+    "reader": "Qwen3.5-0.8B",
+    "readout": "auto",
+    "vegaml": "0.15.0"
+  },
+  "questions": {
+    "should_anonymize": {
+      "examples": 157,
+      "labels": [
+        "false",
+        "true"
+      ],
+      "qhat": 0.63368,
+      "temperature": 1.5758,
+      "type": "boolean"
+    }
+  },
+  "reference": {
+    "should_anonymize": {
+      "abstention_reachable": false,
+      "accuracy": 0.866242,
+      "label_mix": {
+        "false": 0.496815,
+        "true": 0.503185
+      },
+      "mean_confidence": 0.83736,
+      "n": 157,
+      "predicted_mix": {
+        "false": 0.401274,
+        "true": 0.598726
+      },
+      "review_rate": 1.0
+    }
+  },
+  "report": {
+    "should_anonymize": {
+      "band": {
+        "best_achievable": {
+          "n": 157,
+          "n_auto": 25,
+          "precision": 1.0,
+          "precision_lb": 0.9023,
+          "review_rate": 0.8408,
+          "threshold": 0.978977
+        },
+        "confidence": 0.95,
+        "held_out": {
+          "folds": 5,
+          "n": 157,
+          "n_auto": 1,
+          "precision": 1.0,
+          "review_rate": 0.9936,
+          "threshold_mean": 0.9998,
+          "threshold_spread": 0.0002
+        },
+        "n": 157,
+        "n_auto": 0,
+        "precision": null,
+        "precision_lb": 0.0,
+        "reachable": false,
+        "reason": "no confidence line holds precision 0.950 at 95% confidence on 157 examples, the best being 0.902 at a 84% review rate; every answer goes to review until the target is lowered or more examples are labelled",
+        "review_rate": 1.0,
+        "target_precision": 0.95,
+        "threshold": 0.999845
+      },
+      "calibrated": true,
+      "ece_after": 0.0462,
+      "ece_before": 0.0652,
+      "examples": 157,
+      "note": "ECE measured on the fitting examples themselves",
+      "qhat": 0.63368,
+      "readout": "auto",
+      "served_by": "ttt",
+      "temperature": 1.5758
+    }
+  },
+  "version": "8fcc20724eef"
+}

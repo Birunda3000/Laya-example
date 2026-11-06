@@ -1,0 +1,99 @@
+{
+  "train_rows_count": 628,
+  "test_rows_count": 118,
+  "folds": 5,
+  "target_precision": 0.95,
+  "alpha": 0.1,
+  "fit_report": {
+    "heads": {
+      "should_anonymize": {
+        "fitted": true,
+        "examples": 471,
+        "cv_accuracy": 0.9320594479830149,
+        "engine_accuracy": 0.25477707006369427,
+        "chance": 0.5,
+        "at_or_below_chance": false,
+        "used_by_auto": true
+      }
+    },
+    "n_rows": 628,
+    "n_fit": 471,
+    "n_calibrate": 157,
+    "serving": [
+      "should_anonymize"
+    ],
+    "kept": [
+      "should_anonymize"
+    ],
+    "calibration": {
+      "questions": {
+        "should_anonymize": {
+          "temperature": 1.5758,
+          "qhat": 0.63368,
+          "ece_before": 0.0652,
+          "ece_after": 0.0462,
+          "examples": 157
+        }
+      },
+      "target_precision": 0.95,
+      "alpha": 0.1,
+      "n_rows": 157,
+      "band": {
+        "should_anonymize": null
+      },
+      "band_unreachable": [
+        "should_anonymize"
+      ]
+    }
+  },
+  "before_fit": {
+    "total": 118,
+    "accuracy": 0.1356,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "brier_score": 0.793,
+    "roc_auc": 0.6152,
+    "confusion_matrix": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 16,
+      "fn": 102
+    },
+    "routing": {
+      "auto_count": 118,
+      "review_count": 0,
+      "auto_rate": 1.0,
+      "review_rate": 0.0,
+      "auto_precision": 0.0,
+      "auto_accuracy": 0.1356,
+      "abstain_count": 0,
+      "unbound_count": 0
+    }
+  },
+  "after_fit": {
+    "total": 118,
+    "accuracy": 0.8729,
+    "precision": 0.978,
+    "recall": 0.8725,
+    "f1": 0.9223,
+    "brier_score": 0.0903,
+    "roc_auc": 0.9645,
+    "confusion_matrix": {
+      "tp": 89,
+      "fp": 2,
+      "tn": 14,
+      "fn": 13
+    },
+    "routing": {
+      "auto_count": 107,
+      "review_count": 11,
+      "auto_rate": 0.9068,
+      "review_rate": 0.0932,
+      "auto_precision": 0.9881,
+      "auto_accuracy": 0.9065,
+      "abstain_count": 0,
+      "unbound_count": 0
+    }
+  }
+}

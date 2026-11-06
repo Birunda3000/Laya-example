@@ -1,0 +1,52 @@
+{
+  "seed": 42,
+  "test_size": 0.2,
+  "lang": "both",
+  "drop_semantic_type": false,
+  "min_rows_required": 20,
+  "train_dataset_ids": [
+    "folktables_acs_income",
+    "folktables_acs_mobility",
+    "folktables_acs_travel_time",
+    "ibm_telco_churn",
+    "medical_cost_personal",
+    "titanic_passengers",
+    "uci_adult",
+    "uci_bank_marketing",
+    "uci_cervical_cancer",
+    "uci_communities_crime",
+    "uci_default_credit_card",
+    "uci_diabetes_130_hospitals",
+    "uci_drug_consumption",
+    "uci_german_credit",
+    "uci_heart_disease",
+    "uci_student_performance"
+  ],
+  "test_dataset_ids": [
+    "folktables_acs_employment",
+    "folktables_acs_public_coverage",
+    "olist_customers",
+    "propublica_compas"
+  ],
+  "train_stats": {
+    "total": 628,
+    "sensitive": 430,
+    "non_sensitive": 198,
+    "sensitive_ratio": 0.6847,
+    "by_lang": {
+      "en": 314,
+      "pt": 314
+    }
+  },
+  "test_stats": {
+    "total": 118,
+    "sensitive": 102,
+    "non_sensitive": 16,
+    "sensitive_ratio": 0.8644,
+    "by_lang": {
+      "pt": 59,
+      "en": 59
+    }
+  },
+  "total_rows": 746
+}

@@ -1,0 +1,23 @@
+[project]
+name = "laya-pi-test"
+version = "0.1.0"
+description = "Ambiente de Teste do Motor de Decisão Laya com Pi Agent"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "laya[serve,mcp,langchain]",
+    "fastapi",
+    "uvicorn"
+]
+
+# --- Configuração para forçar a versão CPU do PyTorch ---
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
+torchaudio = { index = "pytorch-cpu" }
